@@ -6,6 +6,7 @@
 #   32Byte 파티션 시작 LBA, 그다음 8byte가 끝나는 LBA 위치
 #   둘이 빼서 크기 구하기
 # 파일시스템타입(guid,hexa 대문자)		실시작오프셋		파티션사이즈
+from re import I
 import sys
 
 def caclPartSize(): # 파티션 사이즈 계산
@@ -30,3 +31,11 @@ if __name__ == '__main__' :
         print("Usage : only one argument")
        
     file_path = sys.argv[1]
+    image = open(file_path, 'rb')
+    
+    
+    
+    
+    image.close()
+    
+    
